@@ -13,9 +13,9 @@ public class Files {
         File f = new File(fileName);
         try {
             if(f.createNewFile()){
-                System.out.println("file already created");
+                System.out.println("file created");
             }else{
-                System.out.println("file exists");
+                System.out.println("file already exists");
             }
         }catch(IOException e){
             System.out.println("ERROR");
@@ -24,5 +24,7 @@ public class Files {
         System.out.println("File name: " + f.getName());
         System.out.println("File position: " + f.getPath());
     }
+
+
 
 }
