@@ -8,6 +8,11 @@ public class Files {
     Scanner input = new Scanner(System.in);
 
     public Files() {
+        choose();
+
+    }
+
+    public void choose(){
         while (true) {
             System.out.println("Enter a file name: ");
             Scanner name = new Scanner(System.in);
@@ -29,7 +34,7 @@ public class Files {
 
             while (true) {
                 System.out.println();
-                System.out.println("You are currently manipulating file " + f.getName());
+                System.out.println("You are currently manipulating file " + fileName);
                 System.out.println("What would you like to do?");
                 System.out.println("1 - Write to the file");
                 System.out.println("2 - Read from the file");
@@ -101,13 +106,18 @@ public class Files {
         }
     }
     public void findFiles(){
-        File myFile= new File("C:\\Windows");
+        File myFile= new File("C:\\Users\\lagneskog.moa\\Filer");
         String[] fileList= myFile.list();
+        System.out.println(fileList);
 
         // loops through a list of strings and prints the content
-        for(String aFileName: fileList){
+        for(String aFileName: fileList) {
             System.out.println(aFileName);
         }
+        System.out.println("Chose a file: ");
+        Scanner file = new Scanner(System.in);
+        String filing = file.next();
+        fileName = filing;
     }
 
 }
